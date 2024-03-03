@@ -34,7 +34,7 @@
     ctx = canv.getContext('2d');
 
     game.reset();
-  }
+    }
 
     var game = {
 
