@@ -1,41 +1,42 @@
-var Snake = (function () {
+## A Codigo juego en javascript
+    var Snake = (function () {
 
-  const INITIAL_TAIL = 4;
-  var fixedTail = true;
+    const INITIAL_TAIL = 4;
+    var fixedTail = true;
 
-  var intervalID;
+    var intervalID;
 
-  var tileCount = 10;
-  var gridSize = 400/tileCount;
+    var tileCount = 10;
+    var gridSize = 400/tileCount;
 
-  const INITIAL_PLAYER = { x: Math.floor(tileCount / 2), y: Math.floor(tileCount / 2) };
+    const INITIAL_PLAYER = { x: Math.floor(tileCount / 2), y: Math.floor(tileCount / 2) };
 
-  var velocity = { x:0, y:0 };
-  var player = { x: INITIAL_PLAYER.x, y: INITIAL_PLAYER.y };
+    var velocity = { x:0, y:0 };
+    var player = { x: INITIAL_PLAYER.x, y: INITIAL_PLAYER.y };
 
-  var walls = false;
+    var walls = false;
+  
+    var fruit = { x:1, y:1 };
+  
+    var trail = [];
+    var tail = INITIAL_TAIL;
 
-  var fruit = { x:1, y:1 };
+    var reward = 0;
+    var points = 0;
+    var pointsMax = 0;
 
-  var trail = [];
-  var tail = INITIAL_TAIL;
+    var ActionEnum = { 'none':0, 'up':1, 'down':2, 'left':3, 'right':4 };
+    Object.freeze(ActionEnum);
+    var lastAction = ActionEnum.none;
 
-  var reward = 0;
-  var points = 0;
-  var pointsMax = 0;
-
-  var ActionEnum = { 'none':0, 'up':1, 'down':2, 'left':3, 'right':4 };
-  Object.freeze(ActionEnum);
-  var lastAction = ActionEnum.none;
-
-  function setup () {
+    function setup () {
     canv = document.getElementById('gc');
     ctx = canv.getContext('2d');
 
     game.reset();
   }
 
-  var game = {
+    var game = {
 
     reset: function () {
       ctx.fillStyle = 'grey';
@@ -200,9 +201,9 @@ var Snake = (function () {
 
       return reward;
     }
-  }
+    }
 
-  function keyPush (evt) {
+    function keyPush (evt) {
     switch(evt.keyCode) {
       case 37: //left
       game.action.left();
@@ -234,9 +235,9 @@ var Snake = (function () {
       evt.preventDefault();
       break;
     }
-  }
-
-  return {
+    }
+ 
+    return {
     start: function (fps = 15) {
       window.onload = setup;
       intervalID = setInterval(game.loop, 1000 / fps);
@@ -310,10 +311,10 @@ var Snake = (function () {
     info: {
       tileCount: tileCount
     }
-  };
+    };
 
-})();
+    })();
 
-Snake.start(8);
-Snake.setup.keyboard(true);
-Snake.setup.fixedTail(false);
+    Snake.start(8);
+    Snake.setup.keyboard(true);
+    Snake.setup.fixedTail(false);
