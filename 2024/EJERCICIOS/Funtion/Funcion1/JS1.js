@@ -5,3 +5,7 @@ function saludar(){
     let saludo = "Hola Mundo";
     return saludo;
 }
+const saludarExp=function(){
+    let saludo = "Hola Mundo";
+    return saludo;
+}
