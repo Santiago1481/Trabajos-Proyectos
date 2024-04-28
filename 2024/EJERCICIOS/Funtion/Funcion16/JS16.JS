@@ -10,3 +10,15 @@ function contar(pnum){
     }
     return contador
 }
+
+// Como Exp
+const contarExp=function(pnum){
+    let numero = pnum;
+    let contador = 0;
+    while(numero>contador){
+        contador++
+        console.log(contador)
+    }
+    return contador
+}
+

@@ -11,3 +11,16 @@ function tabla(pnum, pmax) {
     }
     return resultado;
 }
+
+
+// Como Exp
+const tablaExp=function(pnum, pmax) {
+    let numero = pnum;
+    let resultado = "Fin chao";
+    let limite = pmax;
+    for (let conta = 1; conta <= limite; conta++) {
+        let mult = numero * conta;
+        console.log(numero + " x " + conta + " = " + mult);
+    }
+    return resultado;
+}

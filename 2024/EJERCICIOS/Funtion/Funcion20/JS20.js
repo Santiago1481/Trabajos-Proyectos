@@ -8,3 +8,12 @@ function contar(pnum) {
     }
     return "Contador";
 }
+
+// Como Exp
+const contarExp=function(pnum) {
+    let contador;
+    for (let contador = 1; contador <= pnum; contador++) {
+        console.log(contador);
+    }
+    return "Contador";
+}

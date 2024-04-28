@@ -12,3 +12,15 @@ function suma(porcentajeL,porcentajeA,porcentajeU){
     return resultsuma;
 }
 
+// Como Exp
+const porcentaje1Exp=function(pnot1,pporce){
+    let num1 = pnot1;
+    let porce = pporce;
+    let resultado = num1 * porce;
+    return resultado;    
+}
+const sumaExp=function(porcentajeL,porcentajeA,porcentajeU){
+     let resultsuma = porcentajeL + porcentajeA + porcentajeU;  
+    return resultsuma;
+}
+

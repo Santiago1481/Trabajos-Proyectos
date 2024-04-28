@@ -14,3 +14,18 @@ function tabla(pnum,pmax){
     }
     return resultado
 }
+
+// Como Exp
+const tablaExp=function(pnum,pmax){
+    let numero = pnum;
+    let conta = 0;
+    let mult ;
+    let resultado = "Fin chao"
+    let limite = pmax;
+    while(conta<limite){
+        conta=conta+1
+        mult = numero * conta
+        console.log(numero+" x "+conta+" = "+mult) 
+    }
+    return resultado
+}

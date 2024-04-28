@@ -18,3 +18,23 @@ function funcionCon(pedad1){
     }
     return resultadoEdad;
 }
+
+
+//Como Exp
+const caledadExp=function(pfechaN){
+    let fechaN = pfechaN;
+    let fechaAct = 2024;
+    let edadF = fechaAct - fechaN;
+    return edadF;
+}
+const funcionConExp=function(pedad1){
+    let edad = pedad1;
+    let resultadoEdad;
+    if(edad>17){
+        resultadoEdad = "Es mayor de edad"
+    }
+    else{
+        resultadoEdad = "Es menor de edad"
+    }
+    return resultadoEdad;
+}

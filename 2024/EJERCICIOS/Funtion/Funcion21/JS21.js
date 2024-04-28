@@ -9,3 +9,14 @@ function fac(pnum) {
     }
     return fact;
 }
+
+
+// Como Exp
+const facExp=function(pnum) {
+    let fact = 1;
+    for (let contador = 1; contador <= pnum; contador++) {
+        fact *= contador;
+        console.log(fact);
+    }
+    return fact;
+}

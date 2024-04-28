@@ -28,3 +28,31 @@ function sueldoAp(pDiast,pPagod){
     return resultadoFin
 }
 
+// Como Exp
+const sueldoExp=function(pDiast,pPagod){
+    let diasT = pDiast;
+    let pagoD = pPagod;
+    let salario = diasT * pagoD;
+    return salario;
+}
+const saludExp=function(pDiast,pPagod){
+    let pagoSalud = sueldo(pDiast,pPagod)*0.12;    
+    return pagoSalud;
+}
+const pensionExp=function(pDiast,pPagod){
+    let pagoPension = sueldo(pDiast,pPagod)*0.16;
+    return pagoPension;
+}
+const arlExp=function(pDiast,pPagod){
+    let pagoArl = sueldo(pDiast,pPagod)*0.052;
+    return pagoArl
+}
+const sueldoApExp=function(pDiast,pPagod){
+    let sa = salud(pDiast,pPagod);
+    let pe = pension(pDiast,pPagod);
+    let ar = arl(pDiast,pPagod);
+    let resultadoF = sa + pe + ar;
+    let resultadoFin =  sueldo(pDiast,pPagod) - resultadoF ;
+    return resultadoFin
+}
+

@@ -7,3 +7,10 @@ function porcNum(pnum){
     return porResultado;
 
 }
+// Como Exp
+const porcNumExp=function(pnum){
+    let numero = pnum;
+    let porResultado = numero / 100
+    return porResultado;
+
+}

@@ -12,3 +12,16 @@ function edadF(pedad){
     }
     return rEdad
 }
+
+// Como Exp
+const edadFExp=function(pedad){
+    let edad = pedad;
+    let rEdad;
+    if(edad>17){
+        rEdad = "Es mayor de edad";
+    }
+    else{
+        rEdad = "Es menor de edad";
+    }
+    return rEdad
+}
